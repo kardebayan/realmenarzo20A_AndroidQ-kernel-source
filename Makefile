@@ -437,6 +437,9 @@ KBUILD_AFLAGS_MODULE  := -DMODULE
 KBUILD_CFLAGS_MODULE  := -DMODULE
 KBUILD_LDFLAGS_MODULE := -T $(srctree)/scripts/module-common.lds
 GCC_PLUGINS_CFLAGS :=
+VENDOR_EDIT := 1
+ODM_WT_EDIT := yes
+WT_FINAL_RELEASE := yes
 
 # ifdef VENDOR_EDIT
 # Weizhi.Chen@BSP.Kernel.Driver, 2019/10/09, Add for enviroment variant.
@@ -514,6 +517,9 @@ export KBUILD_AFLAGS AFLAGS_KERNEL AFLAGS_MODULE
 export KBUILD_AFLAGS_MODULE KBUILD_CFLAGS_MODULE KBUILD_LDFLAGS_MODULE
 export KBUILD_AFLAGS_KERNEL KBUILD_CFLAGS_KERNEL
 export KBUILD_ARFLAGS
+export VENDOR_EDIT
+export ODM_WT_EDIT
+export WT_FINAL_RELEASE
 
 # When compiling out-of-tree modules, put MODVERDIR in the module
 # tree rather than in the kernel tree. The kernel tree might

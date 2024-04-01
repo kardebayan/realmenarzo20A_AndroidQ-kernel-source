@@ -31,14 +31,14 @@ make -j$(nproc --all) O=out \
 }
 function zupload()
 {
-zimage=out/arch/arm64/boot/Image.gz
+zimage=out/arch/arm64/boot/Image.gz-dtb
 if ! [ -a $zimage ];
 then
 echo  " Failed To Compile Kernel"
 else
 echo -e " Kernel Compile Successful"
-git clone --depth=1 https://github.com/kardebayan/AnyKernel3.git AnyKernel
-cp out/arch/arm64/boot/Image.gz AnyKernel
+git clone --depth=1 https://github.com/shygosh/AnyKernel3 AnyKernel
+cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 cd AnyKernel
 zip -r9 Stormbreaker-r5x-${TANGGAL}.zip *
 cd ../
