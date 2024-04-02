@@ -17,7 +17,7 @@
 #dts-dirs += marvell
 #dts-dirs += mediatek
 #dts-dirs += nvidia
-#dts-dirs += qcom
+dts-dirs += qcom
 #dts-dirs += realtek
 #dts-dirs += renesas
 #dts-dirs += rockchip
@@ -36,8 +36,8 @@
 #ifdef VENDOR_EDIT
 #//zhye@BSP.Boot.Bootflow, 2019-2-19, add for 6125P upgrade
 #dts-dirs += 19021
-dts-dirs += 19631
-dts-dirs += 20667
+#dts-dirs += 19631
+#dts-dirs += 20667
 #endif
 
 subdir-y	:= $(dts-dirs)
